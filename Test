@@ -1,0 +1,21 @@
+package service;
+
+import model.Package;
+import utility.TravelAgency;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+TravelAgency t=new TravelAgency();
+try {
+	for(Package p:t.findPackagesWithMinimumNumberOfDays()){
+		System.out.println(p.package_id+" | "+p.source_place+"-"+p.destination_place+"|"+p.no_of_days+" days|Rs."+p.package_cost);
+	}
+}
+catch(Exception ex) {
+	System.out.println(ex.getMessage());
+}
+	}
+
+}
